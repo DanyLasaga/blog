@@ -7,6 +7,11 @@ import background from "../assets/background.svg";
 	<img id="background" src={background.src} alt="" fetchpriority="high" />
 	<main>
 		<section id="hero">
+			<nav>
+				<a href="/">Inicio</a>
+				<a href="/about/">Sobre mi</a>
+				<a href="/blog/">Blog</a>
+			</nav>
 			<a href="https://astro.build"
 				><img
 					src={astroLogo.src}
@@ -222,5 +227,10 @@ import background from "../assets/background.svg";
 		h1 {
 			line-height: 1.5;
 		}
+	}
+
+	nav {
+		display: flex;
+		gap: 7px;
 	}
 </style>
