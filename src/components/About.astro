@@ -1,5 +1,6 @@
 ---
 import background from "../assets/background.svg";
+// import "../styles/global.css";
 
 const identity = {
     firstName: "Daniela",
@@ -22,8 +23,8 @@ const finished = false;
 const goal = 3;
 
 const skillColor = "midnightblue";
-const fontWeight= "normal";
-const textCase= "none";
+const fontWeight = "normal";
+const textCase = "none";
 ---
 
 <div id="container">
@@ -35,7 +36,6 @@ const textCase= "none";
                 <a href="/about/">Sobre mi</a>
                 <a href="/blog/">Blog</a>
             </nav>
-
             <h1>Sobre mi:</h1>
             <h2>... ¡y mi nuevo sitio Astro!</h2>
 
@@ -120,7 +120,7 @@ const textCase= "none";
     </a>
 </div>
 
-<style define:vars={{skillColor, fontWeight, textCase}}>
+<style define:vars={{ skillColor, fontWeight, textCase }}>
     #background {
         position: fixed;
         top: 0;
@@ -144,7 +144,7 @@ const textCase= "none";
     }
 
     #hero {
-        margin-top: 10px
+        margin-top: 100px;
         display: flex;
         align-items: start;
         flex-direction: column;
@@ -159,6 +159,7 @@ const textCase= "none";
     }
 
     #links {
+        padding-bottom: 10px;
         display: flex;
         gap: 16px;
     }
@@ -295,10 +296,9 @@ const textCase= "none";
         gap: 7px;
     }
 
-.skill {
-    color: var(--skillColor);
-    font-weight: var(--fontWeight);
-    text-transform: var(--textCase);
-  }
-
+    .skill {
+        color: var(--skillColor);
+        font-weight: var(--fontWeight);
+        text-transform: var(--textCase);
+    }
 </style>
