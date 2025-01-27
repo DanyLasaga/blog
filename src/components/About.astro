@@ -2,7 +2,7 @@
 import background from "../assets/background.svg";
 
 const identity = {
-    firstName: "Sarah",
+    firstName: "Daniela",
     country: "Canada",
     occupation: "Escritor técnico",
     hobbies: ["fotografia", "observación de aves", "peñarol"],
@@ -20,6 +20,10 @@ const skills = [
 const happy = true;
 const finished = false;
 const goal = 3;
+
+const skillColor = "midnightblue";
+const fontWeight= "normal";
+const textCase= "none";
 ---
 
 <div id="container">
@@ -66,7 +70,7 @@ const goal = 3;
             </ul>
             <p>Mis habilidades son:</p>
             <ul>
-                {skills.map((skill) => <li>{skill}</li>)}
+                {skills.map((skill) => <li class="skill">{skill}</li>)}
             </ul>
             {happy && <p>¡Estoy feliz de aprender Astro!</p>}
 
@@ -116,7 +120,7 @@ const goal = 3;
     </a>
 </div>
 
-<style>
+<style define:vars={{skillColor, fontWeight, textCase}}>
     #background {
         position: fixed;
         top: 0;
@@ -140,6 +144,7 @@ const goal = 3;
     }
 
     #hero {
+        margin-top: 10px
         display: flex;
         align-items: start;
         flex-direction: column;
@@ -284,8 +289,16 @@ const goal = 3;
             line-height: 1.5;
         }
     }
+
     nav {
         display: flex;
         gap: 7px;
     }
+
+.skill {
+    color: var(--skillColor);
+    font-weight: var(--fontWeight);
+    text-transform: var(--textCase);
+  }
+
 </style>
