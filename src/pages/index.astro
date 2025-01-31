@@ -1,4 +1,5 @@
 ---
+import Greeting from "../components/Greetings";
 import Welcome from "../components/Welcome.astro";
 import Layout from "../layouts/Layout.astro";
 
@@ -10,4 +11,5 @@ const pageTitle = "Inicio";
 
 <Layout title={pageTitle}>
 	<Welcome />
+	<Greeting client:load messages={["Hola", "Qué tal", "Hola a todos"]} />
 </Layout>
